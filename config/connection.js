@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+require('dotenv').config();
 
 const dbPassword = process.env.DATABASE_PASSWORD;
 
