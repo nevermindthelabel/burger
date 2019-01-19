@@ -1,0 +1,9 @@
+USE burgers_db;
+
+INSERT INTO burgers 
+  (burger_name, devoured)
+
+VALUES
+  ('cheeseburger', true),
+  ('guacamole burger', true),
+  ('veggie burger', false);
