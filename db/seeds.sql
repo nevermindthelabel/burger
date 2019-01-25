@@ -1,7 +1,7 @@
 USE burgers_db;
 
 INSERT INTO burgers 
-  (burger_name, devoured)
+  (burger_name, devoured, createdAt)
 
 VALUES
   ('cheeseburger', true),

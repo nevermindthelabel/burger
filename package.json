@@ -20,14 +20,17 @@
   "homepage": "https://github.com/nevermindthelabel/burger#readme",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.5.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "mysql": "^2.16.0",
-    "prettier": "^1.15.3"
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.0"
   }
 }
