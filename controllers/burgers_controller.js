@@ -8,26 +8,31 @@ router.get('/', (request, response) => {
     const allBurgerData = {
       burgers: data
     };
-    console.log(allBurgerData);
+    // console.log(allBurgerData);
     response.render('index', allBurgerData);
   });
 });
+
 router.post('/api/burgers', (request, response) => {
-  burger.createOne(
-    ['burger_name', 'devoured'],
-    [request.body.burger_name, request.body.devoured],
-    result => {
-      response.json({ id: result.insertId });
-    }
-  );
+  burger.createOne(['burger_name'], [request.body.burger_name], data => {
+    // response.json({ id: result.insertId });
+    response.redirect('/');
+  });
 });
-router.put('/api/burgers', (request, response) => {
+
+router.put('/api/burgers/:id', (request, response) => {
+  const condition = `id =${request.params.id}`;
   burger.updateOne(
-    ['burger_name', 'devoured'],
-    [request.body.burger_name, request.body.devoured],
-    result => {
-      response.json({ id: result.insertId });
+    {
+      devoured: true
+    },
+    condition,
+    data => {
+      response.redirect('/');
     }
+    // result => {
+    //   response.json({ id: result.insertId });
+    // }
   );
 });
 module.exports = router;
