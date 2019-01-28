@@ -1,8 +1,14 @@
 #background {
+  padding-top: 10rem;
   background-image: url(../img/amirali-mirhashemian-1271779-unsplash.jpg);
+  padding-bottom: 5rem;
 }
 
 h1 {
   color: lime;
   text-align: center;
+}
+
+i {
+  color: brown;
 }
