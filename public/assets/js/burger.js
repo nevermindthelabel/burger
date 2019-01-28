@@ -16,20 +16,18 @@ $(() => {
   });
 
   // update burger
-  $('.devour').on('click', function(event) {
-    event.preventDefault();
+  $('.devour').on('click', function devour(event) {
+    // event.preventDefault();
     const id = $(this).attr('data-id');
     const burgerToDevour = {
       id
     };
     console.log(burgerToDevour);
-    $.ajax(
-      `/api/burgers/${id}, {
+    $.ajax(`/api/burgers/${id}`, {
       type: 'PUT',
-      data: ${burgerToDevour}
-    }`
-    ).then(() => {
-      console.log('successful');
+      data: `${burgerToDevour}`
+    }).then(() => {
+      location.reload();
     });
   });
 });
